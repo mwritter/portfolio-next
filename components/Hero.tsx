@@ -16,8 +16,10 @@ const Hero = async () => {
       />
 
       <div className="p-10 flex flex-col gap-10">
-        <h1 className="text-bold text-5xl max-w-[25rem]">{introHero.header}</h1>
-        <p className="max-w-[25rem] leading">{introHero.text}</p>
+        <h1 className="font-semibold text-5xl md:max-w-[25rem] ">
+          {introHero.header}
+        </h1>
+        <p className="lg:max-w-[50rem] leading-loose">{introHero.text}</p>
         <Image
           className="absolute -bottom-[125px] right-10"
           src={introHero.secondaryImage}
