@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = ({ image }: FooterProps) => {
   return (
-    <footer className="fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
+    <footer className="flex-1 sticky bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
       <div className=" w-full overflow-hidden">
         {image && (
           <Image
@@ -17,7 +17,7 @@ const Footer = ({ image }: FooterProps) => {
           />
         )}
       </div>
-      <div className="flex gap-5 p-5">
+      <div className="flex gap-5 p-5 items-center">
         <Link target="_blank" href="https://github.com/mwritter">
           <FaGithub color="#2374f6" size={20} />
         </Link>

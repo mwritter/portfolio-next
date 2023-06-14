@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " h-screen flex flex-col"}>
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main className="flex flex-col flex-1">{children}</main>
       </body>
     </html>
   );

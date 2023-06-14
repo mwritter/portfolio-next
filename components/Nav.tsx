@@ -9,7 +9,7 @@ const Nav = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <nav className="sticky top-0 bg-white z-10 sm:border-b-2 sm:border-blue-50">
+    <nav className="sticky z-[1] top-0 bg-white  sm:border-b-2 sm:border-blue-50">
       <div className="grid grid-cols-[1fr,auto] p-10 ">
         <div className="flex gap-2 items-center">
           <FaGithub size={20} />
