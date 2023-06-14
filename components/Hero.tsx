@@ -1,12 +1,11 @@
 import { getIntro } from "@/sanity/sanity-utils";
+import { Intro } from "@/types/Intro";
 import Image from "next/image";
 import React from "react";
 
-const Hero = async () => {
-  const introHero = await getIntro();
-
+const Hero = async ({ introHero }: HeroPorps) => {
   return (
-    <div className="grid md:grid-cols-2 p-10 overflow-hidden bg-[#EAF2FF]">
+    <div className="grid md:grid-cols-2 md:p-10 overflow-hidden bg-[#EAF2FF]">
       <Image
         className="self-end justify-self-end hidden md:block"
         src={introHero.primaryImage}
@@ -15,7 +14,7 @@ const Hero = async () => {
         height={455}
       />
 
-      <div className=" relative p-10 flex flex-col gap-10 lg:max-w-[50rem]">
+      <div className="relative p-10 flex flex-col gap-10 lg:max-w-[50rem]">
         <h1 className="font-semibold text-5xl md:max-w-[25rem] ">
           {introHero.header}
         </h1>
@@ -31,5 +30,9 @@ const Hero = async () => {
     </div>
   );
 };
+
+interface HeroPorps {
+  introHero: Intro;
+}
 
 export default Hero;

@@ -5,7 +5,7 @@ const clients = ["Google", "Chewy", "Comprehensive", "Lululemon"];
 
 const Clients = () => {
   return (
-    <div className="p-10 grid justify-center md:grid-cols-[auto,1fr] gap-5">
+    <div className="text-center p-10 grid justify-center md:text-left md:grid-cols-[auto,1fr] gap-5">
       <h2
         className="relative md:pl-28 text-4xl font-semibold max-w-[25rem]
         md:after:absolute

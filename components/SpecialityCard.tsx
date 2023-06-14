@@ -4,11 +4,23 @@ import { IoMdColorPalette } from "react-icons/io";
 const SpecialityCard = ({ icon, header, text }: SpecialityCardProps) => {
   return (
     <>
-      <div className="p-10 bg-[#EAF2FF] rounded-md  grid gap-5">
-        {icon === "clipboard" && <FaClipboardList />}
-        {icon === "keyboard" && <FaKeyboard />}
-        {icon === "style" && <IoMdColorPalette />}
-        <h3 className="font-semibold text-xl">{header}</h3>
+      <div className="p-10 bg-[#EAF2FF] rounded-md grid gap-5">
+        {icon === "clipboard" && (
+          <span className="flex w-[35px] h-[35px]  justify-center items-center rounded-full bg-white">
+            <FaClipboardList size={20} />
+          </span>
+        )}
+        {icon === "keyboard" && (
+          <span className="flex w-[35px] h-[35px]  justify-center items-center rounded-full bg-white">
+            <FaKeyboard size={20} />
+          </span>
+        )}
+        {icon === "style" && (
+          <span className="flex w-[35px] h-[35px]  justify-center items-center rounded-full bg-white">
+            <IoMdColorPalette size={20} />
+          </span>
+        )}
+        <h3 className="font-semibold text-xl w-min">{header}</h3>
         <p className="mt-10">{text}</p>
       </div>
     </>
