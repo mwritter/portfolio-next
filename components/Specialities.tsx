@@ -1,16 +1,18 @@
 import React from "react";
 import SpecialityCard from "./SpecialityCard";
+import Badges from "./Badges";
 
 // TODO: add these to sanity, maybe use cloudinary for badges
 
 const Specialities = () => {
   return (
-    <div className="flex flex-col w-full md:p-10">
-      <div className="self-center text-center max-w-[15rem]">
+    <div className="flex flex-col w-full md:p-10 mb-10">
+      <div className="self-center text-center max-w-[15rem] mb-10">
         <h2 className="font-semibold text-4xl mb-3">Specialities</h2>
         <p>and some of the technologies Im currently working with</p>
       </div>
-      <div className="p-3 md:mx-auto my-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+      <Badges />
+      <div className="p-3 md:mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
         <SpecialityCard
           icon="clipboard"
           header="Project Management"

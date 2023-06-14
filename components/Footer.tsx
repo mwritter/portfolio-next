@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = ({ image }: FooterProps) => {
   return (
-    <footer className="sm:sticky md:fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
+    <footer className="fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
       <div className=" w-full overflow-hidden">
         {image && (
           <Image
