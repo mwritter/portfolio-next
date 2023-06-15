@@ -1,6 +1,7 @@
 import { getIntro } from "@/sanity/sanity-utils";
 import { Intro } from "@/types/Intro";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = async ({ introHero }: HeroPorps) => {
@@ -19,9 +20,12 @@ const Hero = async ({ introHero }: HeroPorps) => {
           {introHero.header}
         </h1>
         <p className="leading-loose">{introHero.text}</p>
-        <button className="hover:shadow-md self-start bg-[#2374f6] p-2 rounded-md">
+        <Link
+          href={"/contact"}
+          className="hover:shadow-md self-start bg-[#2374f6] p-2 rounded-md"
+        >
           <div className="text-white">Let&apos;s talk</div>
-        </button>
+        </Link>
         <Image
           className="absolute -bottom-[125px] right-10"
           src={introHero.secondaryImage}

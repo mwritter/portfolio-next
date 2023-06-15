@@ -21,7 +21,7 @@ const Clients = () => {
       <div>
         <ul className="grid justify-center md:grid-cols-3 md:ml-10 gap-5 max-w-[500px]">
           {clients.map((client) => (
-            <li>
+            <li key={client}>
               {/* Added client logo */}
               {client}
             </li>

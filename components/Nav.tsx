@@ -36,7 +36,10 @@ const Nav = () => {
           }   px-5 py-2 flex-col md:top-0 md:right-0 md:relative md:flex md:flex-row gap-10`}
         >
           {links.map((link) => (
-            <li className="hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md">
+            <li
+              key={link}
+              className="hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md"
+            >
               {link}
             </li>
           ))}

@@ -5,7 +5,7 @@ import Badges from "./Badges";
 const SpecialityCard = ({ icon, header, text }: SpecialityCardProps) => {
   return (
     <>
-      <div className="relative p-10 bg-[#EAF2FF] rounded-md grid gap-5 overflow-hidden">
+      <div className="p-10 bg-[#EAF2FF] rounded-md grid gap-5 overflow-hidden shadow-md">
         {icon === "clipboard" && (
           <span className="flex w-[35px] h-[35px]  justify-center items-center rounded-full bg-white">
             <FaClipboardList size={20} />

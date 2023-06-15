@@ -13,7 +13,6 @@ export default async function Home() {
       <Hero introHero={introHero} />
       <Clients />
       <Specialities />
-      <Footer image={introHero.secondaryImage} />
     </>
   );
 }
