@@ -2,13 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import {
-  FaArrowLeft,
-  FaBackward,
-  FaBars,
-  FaGithub,
-  FaXing,
-} from "react-icons/fa";
+import { FaArrowLeft, FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { SiGithub } from "react-icons/si";
 
@@ -53,14 +47,15 @@ const Nav = () => {
           }   px-5 py-2 flex-col md:top-0 md:right-0 md:relative md:flex md:flex-row gap-10`}
         >
           {links.map((link) => (
-            <li
-              key={link}
-              className={`${
-                pathname === `/${link}` ? "bg-bg-[#2374f6]" : ""
-              } hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md capitalize`}
-            >
-              <Link href={`/${link}`}>{link}</Link>
-            </li>
+            <Link key={link} href={`/${link}`}>
+              <li
+                className={`${
+                  pathname === `/${link}` ? "bg-[#2374f6] text-white" : ""
+                } hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md capitalize`}
+              >
+                {link}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
