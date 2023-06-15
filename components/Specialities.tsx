@@ -6,7 +6,7 @@ import Badges from "./Badges";
 
 const Specialities = () => {
   return (
-    <div className="flex flex-col w-full md:p-10 mb-10">
+    <div className="flex flex-col w-full md:p-10 mb-[200px]">
       <div className="self-center text-center max-w-[15rem] mb-10">
         <h2 className="font-semibold text-4xl mb-3">Specialities</h2>
         <p>and some of the technologies Im currently working with</p>

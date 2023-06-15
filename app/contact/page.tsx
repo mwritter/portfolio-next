@@ -5,7 +5,7 @@ import Image from "next/image";
 const ContactPage = async () => {
   const introHero = await getIntro();
   return (
-    <div className="mx-auto w-full lg:w-[75%] max-w-[1000px] h-full flex items-center justify-center ">
+    <div className="mx-auto w-full lg:w-[75%] max-w-[1000px] h-full flex items-center justify-center mb-[200px]">
       <div className="relative overflow-hidden bg-blue-50 rounded-md grid items-center w-full shadow-lg">
         <div className="absolute top-0 lef-10 lg:grid justify-start items-center">
           <Image

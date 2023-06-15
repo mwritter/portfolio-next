@@ -1,21 +1,38 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaBars, FaGithub, FaXing } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaBackward,
+  FaBars,
+  FaGithub,
+  FaXing,
+} from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { SiGithub } from "react-icons/si";
 
 // TODO: these links need to nav to the right spot
 
-const links = ["Contact", "Resume"];
+const links = ["contact", "resume"];
 
 const Nav = () => {
+  const pathname = usePathname();
   const [opened, setOpened] = useState(false);
 
   return (
-    <nav className="sticky z-[1] top-0  bg-white border-b-2 border-blue-50 md:border-none shadow-sm">
+    <nav className="sticky z-10 top-0  bg-white border-b-2 border-blue-50 md:border-none shadow-sm">
       <div className="grid grid-cols-[1fr,auto] p-10 ">
         <div className="flex gap-2 items-center">
-          <FaGithub size={20} />
+          {pathname !== "/" && (
+            <Link href="/">
+              <span className="flex gap-2 pr-5 items-center">
+                <FaArrowLeft />
+                Back
+              </span>
+            </Link>
+          )}
+          <SiGithub color="#2374f6" size={20} />
           <Link target="_blank" href="https://github.com/mwritter">
             mwritter
           </Link>
@@ -38,9 +55,11 @@ const Nav = () => {
           {links.map((link) => (
             <li
               key={link}
-              className="hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md"
+              className={`${
+                pathname === `/${link}` ? "bg-bg-[#2374f6]" : ""
+              } hover:bg-[#2374f6] hover:text-white hover:cursor-pointer p-2 w-full text-center rounded-md capitalize`}
             >
-              {link}
+              <Link href={`/${link}`}>{link}</Link>
             </li>
           ))}
         </ul>

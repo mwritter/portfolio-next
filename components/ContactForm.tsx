@@ -6,6 +6,8 @@ import * as Yup from "yup";
 import { AnimatePresence, usePresence } from "framer-motion";
 import { motion as m } from "framer-motion";
 import Confetti from "react-confetti";
+import Link from "next/link";
+import { SiLinkedin, SiMaildotru } from "react-icons/si";
 
 const AnimatedComponent = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +17,7 @@ const AnimatedComponent = () => {
       {!submitted ? (
         <ContactForm key={"form"} onSubmitted={setSubmitted} />
       ) : (
-        <ContactFormSubmitted key={"submitted"} onBack={setSubmitted} />
+        <ContactFormSubmitted key={"submitted"} />
       )}
     </AnimatePresence>
   );
@@ -41,6 +43,10 @@ const ContactForm = ({
 
     onSubmit: (values) => {
       onSubmitted(true);
+      fetch("/api/contact", {
+        method: "post",
+        body: JSON.stringify(values),
+      });
     },
   });
 
@@ -58,9 +64,11 @@ const ContactForm = ({
     >
       <form onSubmit={formik.handleSubmit}>
         <div className="flex-1 text-gray-700 p-10 md:p-20">
-          <h1 className="text-xl font-semibold pb-2">Let's talk</h1>
+          <h1 className="text-xl font-semibold pb-2">Let&apos;s talk</h1>
           <p className="text-sm text-gray-500">
             Send me a message and I&apos;ll get back to you as soon as possible.
+            Feel free to use your prefered way of messaging, see the mail and
+            LinkedIn links at the bottom of this form.
           </p>
 
           <div className="mt-6 w-full">
@@ -120,15 +128,25 @@ const ContactForm = ({
           </button>
         </div>
       </form>
+      <div className="flex w-full justify-center gap-10 p-2">
+        <a
+          title="Use your own email client"
+          href="mailto:matthewwilliamritter@gmail.com"
+        >
+          <SiMaildotru color="#2374f6" size={20} />
+        </a>
+        <Link
+          title="Message me on LinkedIn"
+          href="https://www.linkedin.com/in/matthew-ritter-a35035154/"
+        >
+          <SiLinkedin color="#2374f6" size={20} />
+        </Link>
+      </div>
     </m.div>
   );
 };
 
-const ContactFormSubmitted = ({
-  onBack,
-}: {
-  onBack: (value: boolean) => void;
-}) => {
+const ContactFormSubmitted = () => {
   const [pieces, setPieces] = useState(200);
 
   useEffect(() => {
@@ -151,7 +169,6 @@ const ContactFormSubmitted = ({
           back to you as soon as I can!
         </p>
       </div>
-      <button onClick={() => onBack(false)}>Back</button>
       <Confetti gravity={0.2} numberOfPieces={pieces} />
     </m.div>
   );

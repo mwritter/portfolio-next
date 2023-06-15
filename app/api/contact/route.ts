@@ -26,7 +26,6 @@ export async function POST(request: NextRequest) {
 
   SendGrid.send(data);
 
-  // TODO: use send grid to send myself an email
   return NextResponse.json({
     status: "success",
   });

@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const Footer = async () => {
   const intro = await getIntro();
 
   return (
-    <footer className="flex-1 fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
+    <footer className="z-10 flex-1 fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
       <div className=" w-full overflow-hidden">
         <Image
           className="absolute -top-[200px] left-[100px]"
@@ -20,13 +21,13 @@ const Footer = async () => {
       </div>
       <div className="flex gap-5 p-5 items-center">
         <Link target="_blank" href="https://github.com/mwritter">
-          <FaGithub color="#2374f6" size={20} />
+          <SiGithub color="#2374f6" size={20} />
         </Link>
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/matthew-ritter-a35035154/"
         >
-          <FaLinkedin color="#2374f6" size={20} />
+          <SiLinkedin color="#2374f6" size={20} />
         </Link>
       </div>
     </footer>
