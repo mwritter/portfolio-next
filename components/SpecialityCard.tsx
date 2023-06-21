@@ -1,11 +1,10 @@
 import { FaClipboardList, FaKeyboard } from "react-icons/fa";
 import { IoMdColorPalette } from "react-icons/io";
-import Badges from "./Badges";
 
 const SpecialityCard = ({ icon, header, text }: SpecialityCardProps) => {
   return (
     <>
-      <div className="p-10 bg-[#EAF2FF] rounded-md grid gap-5 overflow-hidden shadow-md">
+      <div className="p-10 bg-[#EAF2FF] rounded-md grid gap-5 overflow-hidden shadow-md w-full md:max-w-[500px]">
         {icon === "clipboard" && (
           <span className="flex w-[35px] h-[35px]  justify-center items-center rounded-full bg-white">
             <FaClipboardList size={20} />
@@ -22,16 +21,24 @@ const SpecialityCard = ({ icon, header, text }: SpecialityCardProps) => {
           </span>
         )}
         <h3 className="font-semibold text-xl w-min">{header}</h3>
-        <p className="mt-10">{text}</p>
+        <div className="">
+          <ul>
+            {text.map((t) => (
+              <li className="m-2">
+                <p className="leading-loose">{t}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
 };
 
 interface SpecialityCardProps {
-  icon: "clipboard" | "keyboard" | "style";
+  icon: string;
   header: string;
-  text: string;
+  text: string[];
 }
 
 export default SpecialityCard;

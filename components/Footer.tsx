@@ -9,7 +9,10 @@ const Footer = async () => {
   const intro = await getIntro();
 
   return (
-    <footer className="z-10 flex-1 fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]">
+    <footer
+      id="Footer"
+      className="z-10 flex-1 fixed bottom-0 overflow-hidden flex justify-between w-full bg-[#EAF2FF]"
+    >
       <div className=" w-full overflow-hidden">
         <Image
           className="absolute -top-[200px] left-[100px]"

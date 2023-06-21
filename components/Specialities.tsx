@@ -1,10 +1,10 @@
-import React from "react";
 import SpecialityCard from "./SpecialityCard";
 import Badges from "./Badges";
+import { getSpecialities } from "@/sanity/sanity-utils";
 
-// TODO: add these to sanity, maybe use cloudinary for badges
+const Specialities = async () => {
+  const specialities = await getSpecialities();
 
-const Specialities = () => {
   return (
     <div className="flex flex-col w-full md:p-10 mb-[200px]">
       <div className="self-center text-center max-w-[15rem] mb-10">
@@ -13,21 +13,9 @@ const Specialities = () => {
       </div>
       <Badges />
       <div className="p-3 md:mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
-        <SpecialityCard
-          icon="clipboard"
-          header="Project Management"
-          text="Things about project management that I do."
-        />
-        <SpecialityCard
-          icon="keyboard"
-          header="Software Engineering"
-          text="Things about project management that I do."
-        />
-        <SpecialityCard
-          icon="style"
-          header="UI/UX Design"
-          text="Things about project management that I do."
-        />
+        {specialities.reverse().map((props) => (
+          <SpecialityCard {...props} />
+        ))}
       </div>
     </div>
   );

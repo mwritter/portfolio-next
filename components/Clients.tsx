@@ -1,9 +1,6 @@
-import React from "react";
+import { Resume } from "@/types/Resume";
 
-// TODO: put these in sanity with logo
-const clients = ["Google", "Chewy", "Comprehensive", "Lululemon"];
-
-const Clients = () => {
+const Clients = ({ clients }: ClientsProps) => {
   return (
     <div className="text-center p-10 grid justify-center md:text-left md:grid-cols-[auto,1fr] gap-5">
       <h2
@@ -20,10 +17,10 @@ const Clients = () => {
       </h2>
       <div>
         <ul className="grid justify-center md:grid-cols-3 md:ml-10 gap-5 max-w-[500px]">
-          {clients.map((client) => (
-            <li key={client}>
-              {/* Added client logo */}
-              {client}
+          {clients?.map((client) => (
+            <li key={client.name}>
+              {/* Maybe add client logo */}
+              {client.name}
             </li>
           ))}
         </ul>
@@ -31,5 +28,9 @@ const Clients = () => {
     </div>
   );
 };
+
+interface ClientsProps {
+  clients: Resume["clients"];
+}
 
 export default Clients;

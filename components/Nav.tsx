@@ -15,7 +15,10 @@ const Nav = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <nav className="sticky z-10 top-0  bg-white border-b-2 border-blue-50 md:border-none shadow-sm">
+    <nav
+      id="Nav"
+      className="sticky z-10 top-0  bg-white border-b-2 border-blue-50 md:border-none shadow-sm"
+    >
       <div className="grid grid-cols-[1fr,auto] p-10 ">
         <div className="flex gap-2 items-center">
           {pathname !== "/" && (

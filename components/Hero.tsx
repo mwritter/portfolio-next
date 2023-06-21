@@ -1,10 +1,9 @@
-import { getIntro } from "@/sanity/sanity-utils";
 import { Intro } from "@/types/Intro";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Hero = async ({ introHero }: HeroPorps) => {
+const Hero = ({ introHero }: HeroPorps) => {
   return (
     <div className="grid md:grid-cols-2 md:p-10 overflow-hidden bg-[#EAF2FF]">
       <Image
@@ -22,9 +21,9 @@ const Hero = async ({ introHero }: HeroPorps) => {
         <p className="leading-loose">{introHero.text}</p>
         <Link
           href={"/contact"}
-          className="hover:shadow-md self-start bg-[#2374f6] p-2 rounded-md"
+          className="hover:shadow-md self-start bg-[#2374f6] p-2 rounded-md text-white z-10"
         >
-          <div className="text-white">Let&apos;s talk</div>
+          Let&apos;s talk
         </Link>
         <Image
           className="absolute -bottom-[125px] right-10"
