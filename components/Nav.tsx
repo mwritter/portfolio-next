@@ -6,8 +6,6 @@ import { FaArrowLeft, FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { SiGithub } from "react-icons/si";
 
-// TODO: these links need to nav to the right spot
-
 const links = ["contact", "resume"];
 
 const Nav = () => {
