@@ -13,8 +13,8 @@ const Specialities = async () => {
       </div>
       <Badges />
       <div className="p-3 md:mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
-        {specialities.reverse().map((props) => (
-          <SpecialityCard {...props} />
+        {specialities.reverse().map((props, idx) => (
+          <SpecialityCard key={idx} {...props} />
         ))}
       </div>
     </div>

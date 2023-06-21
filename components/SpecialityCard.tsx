@@ -23,8 +23,8 @@ const SpecialityCard = ({ icon, header, text }: SpecialityCardProps) => {
         <h3 className="font-semibold text-xl w-min">{header}</h3>
         <div className="">
           <ul>
-            {text.map((t) => (
-              <li className="m-2">
+            {text.map((t, idx) => (
+              <li key={idx} className="m-2">
                 <p className="leading-loose">{t}</p>
               </li>
             ))}

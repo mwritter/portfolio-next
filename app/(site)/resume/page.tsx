@@ -27,7 +27,7 @@ const ResumePage = async () => {
       <div>
         <Title>Work Experience</Title>
         {resume.workExperience.map((work) => (
-          <WorkExperience work={work} />
+          <WorkExperience key={work.date} work={work} />
         ))}
       </div>
       {/* Specialities */}
@@ -41,7 +41,7 @@ const ResumePage = async () => {
         <Section>
           <ul>
             {resume.clients.map((client) => (
-              <li className="mb-2">
+              <li key={client.name} className="mb-2">
                 <p>{client.name}</p>
                 <p
                   className="relative ml-2 px-5 py-2

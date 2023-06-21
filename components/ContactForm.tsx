@@ -54,7 +54,7 @@ const ContactForm = ({
 
   useEffect(() => {
     if (!isPresent) safeToRemove();
-  }, [isPresent]);
+  }, [isPresent, safeToRemove]);
 
   return (
     <m.div
