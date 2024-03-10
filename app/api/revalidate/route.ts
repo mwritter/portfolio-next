@@ -29,6 +29,8 @@ export async function POST(req: Request) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
+    console.log("The data from the webhook", JSON.parse(body));
+
     // Parse out the body for us to work with.
     const delta = webhookPayloadSchema.parse(JSON.parse(body));
     const tagsToInvalidate = new Set<string>();
@@ -66,11 +68,6 @@ const webhookPayloadSchema = z.object({
   _id: z.string(),
   _type: z.string(),
   slug: z.string().nullable(),
-  operation: z.union([
-    z.literal("create"),
-    z.literal("update"),
-    z.literal("delete"),
-  ]),
 });
 
 const streamToString = async (stream: ReadableStream<Uint8Array>) => {
