@@ -1,7 +1,8 @@
 import { defineField } from "sanity";
+import { SchemaType } from "./schemaTypes";
 
 const specialities = {
-  name: "specialities",
+  name: SchemaType.Specialities,
   title: "Specialities",
   type: "document",
   fields: [

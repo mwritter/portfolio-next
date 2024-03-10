@@ -1,7 +1,8 @@
 import { defineField } from "sanity";
+import { SchemaType } from "./schemaTypes";
 
 const intro = {
-  name: "intro",
+  name: SchemaType.Intro,
   title: "Intro",
   type: "document",
   fields: [

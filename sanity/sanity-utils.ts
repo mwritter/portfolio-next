@@ -1,15 +1,11 @@
 import { Intro } from "@/types/Intro";
 import { Resume } from "@/types/Resume";
 import { Speciality } from "@/types/Speciality";
-import { createClient, groq } from "next-sanity";
+import { groq } from "next-sanity";
+import client from "./client";
+import { SchemaType } from "./schemas/schemaTypes";
 
 export async function getIntro(): Promise<Intro> {
-  const client = createClient({
-    projectId: "6rurbmv4",
-    dataset: "production",
-    apiVersion: "2023-05-13",
-  });
-
   const [intro] = await client.fetch<Intro[]>(
     groq`*[_type=="intro"]{
         _id,
@@ -18,18 +14,14 @@ export async function getIntro(): Promise<Intro> {
         "secondaryImage": secondaryImage.asset->url,
         header,
         text
-    }`
+    }`,
+    {},
+    { next: { tags: [SchemaType.Intro] } }
   );
 
   return intro;
 }
 export async function getResume(): Promise<Resume> {
-  const client = createClient({
-    projectId: "6rurbmv4",
-    dataset: "production",
-    apiVersion: "2023-05-13",
-  });
-
   const [resume] = await client.fetch<Resume[]>(
     groq`*[_type=="resume"]{
         _id,
@@ -39,19 +31,15 @@ export async function getResume(): Promise<Resume> {
         technoligies,
         clients,
         education
-    }`
+    }`,
+    {},
+    { next: { tags: [SchemaType.Resume] } }
   );
 
   return resume;
 }
 
 export async function getSpecialities(): Promise<Speciality[]> {
-  const client = createClient({
-    projectId: "6rurbmv4",
-    dataset: "production",
-    apiVersion: "2023-05-13",
-  });
-
   const specialities = await client.fetch<Speciality[]>(
     groq`*[_type=="specialities"]{
         _id,
@@ -59,7 +47,9 @@ export async function getSpecialities(): Promise<Speciality[]> {
         icon,
         header,
         text
-    }`
+    }`,
+    {},
+    { next: { tags: [SchemaType.Specialities] } }
   );
 
   return specialities;
