@@ -71,8 +71,6 @@ const webhookPayloadSchema = z.object({
     z.literal("update"),
     z.literal("delete"),
   ]),
-  changedProdReady: z.boolean().nullable(),
-  fullRebuild: z.boolean().optional().nullable(),
 });
 
 const streamToString = async (stream: ReadableStream<Uint8Array>) => {
