@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
 import Markdown from "react-markdown";
+import { HighlightedText } from "../MarkdownBlocks/HighlightedText/HighlightedText";
 
 export type SectionTextProps = Array<TextType>;
 
@@ -25,7 +25,3 @@ const SectionText = ({ markdown }: { markdown: string }) => {
 };
 
 export default SectionText;
-
-const HighlightedText = ({ children }: PropsWithChildren) => {
-  return <span className="text-white">{children}</span>;
-};
