@@ -34,15 +34,15 @@
         position: absolute;
         inset: 0;
         border-radius: 100%;
-        box-shadow: 0px 0px 20px white;
+        box-shadow: 0px 0px 20px var(--timeline-bar-color-glow);
     }
 }
 
 @keyframes pulse {
     0% {
-        box-shadow: 0px 0px 20px lightgreen;
+        box-shadow: 0px 0px 20px var(--accent-color-glow);
     }
     100% {
-        box-shadow: 0px 0px 50px lightgreen;
+        box-shadow: 0px 0px 50px var(--accent-color-glow);
     }
 }

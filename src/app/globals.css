@@ -4,6 +4,12 @@
   --background: #ffffff;
   --foreground: #171717;
   --light-grey: #4E4E4E;
+
+  --timeline-bar-color: #000;
+  --timeline-bar-color-glow: #000;
+
+  --accent-color: #3f5c86;
+  --accent-color-glow: rgb(118, 124, 132);
 }
 
 @theme inline {
@@ -19,6 +25,12 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --timeline-bar-color: #fff;
+    --timeline-bar-color-glow: #fff;
+    --accent-color: #402d9f;
+
+    --accent-color-glow: #2162ccd1;
   }
 }
 
