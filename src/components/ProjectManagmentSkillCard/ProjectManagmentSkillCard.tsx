@@ -1,12 +1,10 @@
-import { cn } from "@/utils/cn";
 import {
   SkillCard,
   SkillCardDescription,
   SkillCardHeader,
-  SkillCardIcon,
+  SkillCardIconPM,
   SkillCardTitle,
 } from "../SkillCard/SkillCard";
-import styles from "./ProjectmanagmentSkillCard.module.css";
 
 const markdown = `
 Work with team members to structure sprints, and to scope and priorities work.
@@ -22,18 +20,5 @@ export const ProjectManagmentSkillCard = () => {
       </SkillCardHeader>
       <SkillCardDescription markdown={markdown} />
     </SkillCard>
-  );
-};
-
-export const SkillCardIconPM = () => {
-  return (
-    <div className={cn(styles["skill-card-icon-pm"])}>
-      <SkillCardIcon />
-      <SkillCardIcon />
-      <SkillCardIcon />
-      <SkillCardIcon />
-      <SkillCardIcon />
-      <SkillCardIcon />
-    </div>
   );
 };

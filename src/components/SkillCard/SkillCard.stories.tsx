@@ -3,9 +3,9 @@ import {
   SkillCard,
   SkillCardDescription,
   SkillCardHeader,
+  SkillCardIconPM,
   SkillCardTitle,
 } from "./SkillCard";
-import { SkillCardIconPM } from "../ProjectManagmentSkillCard/ProjectManagmentSkillCard";
 
 export default {
   title: "Components/SkillCard",

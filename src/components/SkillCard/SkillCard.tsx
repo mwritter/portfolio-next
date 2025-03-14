@@ -36,3 +36,34 @@ export const SkillCardDescription = ({
     </div>
   );
 };
+
+export const SkillCardIconDesign = () => {
+  return (
+    <div className={cn(styles["skill-card-icon-design"])}>
+      <SkillCardIcon />
+      <SkillCardIcon />
+      <SkillCardIcon />
+    </div>
+  );
+};
+
+export const SkillCardIconSE = () => {
+  return (
+    <div className={cn(styles["skill-card-icon-se"])}>
+      <SkillCardIcon />
+    </div>
+  );
+};
+
+export const SkillCardIconPM = () => {
+  return (
+    <div className={cn(styles["skill-card-icon-pm"])}>
+      <SkillCardIcon />
+      <SkillCardIcon />
+      <SkillCardIcon />
+      <SkillCardIcon />
+      <SkillCardIcon />
+      <SkillCardIcon />
+    </div>
+  );
+};

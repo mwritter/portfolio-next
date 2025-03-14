@@ -1,12 +1,10 @@
-import { cn } from "@/utils/cn";
 import {
   SkillCard,
   SkillCardDescription,
   SkillCardHeader,
-  SkillCardIcon,
+  SkillCardIconDesign,
   SkillCardTitle,
 } from "../SkillCard/SkillCard";
-import styles from "./DesignSkillCard.module.css";
 
 const markdown = `
 Create design systems to insure design constancy and improve developer experience 
@@ -22,15 +20,5 @@ export const DesignSkillCard = () => {
       </SkillCardHeader>
       <SkillCardDescription markdown={markdown} />
     </SkillCard>
-  );
-};
-
-export const SkillCardIconDesign = () => {
-  return (
-    <div className={cn(styles["skill-card-icon-design"])}>
-      <SkillCardIcon />
-      <SkillCardIcon />
-      <SkillCardIcon />
-    </div>
   );
 };

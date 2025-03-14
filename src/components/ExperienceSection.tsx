@@ -2,7 +2,7 @@ import { DesignSkillCard } from "./DesignSkillCard/DesignSkillCard";
 import Heading from "./Heading/Heading";
 import { ProjectManagmentSkillCard } from "./ProjectManagmentSkillCard/ProjectManagmentSkillCard";
 import SectionText from "./SectionText/SectionText";
-import { SoftwareEngineerSkillCard } from "./SoftwareEngineerSkillCard/SoftwareEngineerSkillCard";
+import { SoftwareEngineerSkillCard } from "./SoftwareEngineeringSkillCard/SoftwareEngineerSkillCard";
 import { Timeline } from "./Timeline/Timeline";
 
 const markdown = `
