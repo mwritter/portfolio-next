@@ -65,7 +65,7 @@ const TimelineSection = ({
 const TimelineDot = ({ active }: { active?: boolean }) => {
   return (
     <div
-      className={cn("h-[50px] w-[50px] rounded-full bg-[#3C924A]/30", {
+      className={cn("sm:h-[50px] sm:w-[50px] rounded-full bg-[#3C924A]/30", {
         [styles["timeline-dot-active"]]: active,
         "bg-[#136B22]": active,
       })}
