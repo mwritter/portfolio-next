@@ -53,7 +53,7 @@ const TimelineSection = ({
         styles["timeline-section"]
       )}
     >
-      <div className={cn("flex gap-4 items-center ")}>
+      <div className={cn("flex sm:gap-4 items-center ")}>
         <TimelineDot active={active} />
         <TimelineBar active={active} />
       </div>

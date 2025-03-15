@@ -5,7 +5,7 @@ import Markdown from "../Markdown";
 
 export const SkillCard = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col gap-20 border border-solid border-light-grey rounded-sm p-5">
+    <div className="flex flex-col gap-20 border border-solid border-light-grey rounded-sm p-5 backdrop-blur-xl">
       {children}
     </div>
   );
