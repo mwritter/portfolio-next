@@ -1,6 +1,6 @@
 .header {
     &::before {
-        content: "hey";
+        content: "";
         position: absolute;
         width: 50%;
         opacity: 50%;
