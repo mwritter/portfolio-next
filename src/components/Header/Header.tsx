@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <nav
       className={cn(
-        "bg-white/10 py-2 px-3 backdrop-blur-3xl w-min rounded-md relative",
-        "fixed sm:top-10 sm:right-10 max-sm:bottom-0 max-sm:left-1/2 -translate-[50%] z-20",
+        "bg-white/10 py-2 px-3 backdrop-blur-lg w-min rounded-md relative",
+        "fixed sm:top-10 sm:right-10 max-sm:bottom-10 max-sm:left-1/2 -translate-[50%] z-20",
         "print:hidden",
         styles.header,
         {
@@ -21,10 +21,22 @@ const Header = () => {
     >
       <ul className="flex gap-5">
         <li>
-          <Link href="/">Landing</Link>
+          <Link
+            className={cn({
+              "text-black": pathname !== "/resume",
+            })}
+            href="/"
+          >
+            Landing
+          </Link>
         </li>
         <li>
-          <Link className="rounded-full" href="/resume">
+          <Link
+            className={cn({
+              "text-black": pathname === "/resume",
+            })}
+            href="/resume"
+          >
             Resume
           </Link>
         </li>
