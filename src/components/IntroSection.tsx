@@ -7,9 +7,9 @@ and **over a decade** of experience working with web technologies.
 \\
 \\
 In my current role as a Senior Software Engineer, I have the 
-privilege of working on many interesting projects, that involve 
-**building APIs** with **NodeJS**, interfacing with **cloud** platforms, 
-**site modernization**, **e-commerce** platform, **scaffolding greenfield 
+privilege of working on many interesting projects that involve 
+**building APIs** with **NodeJS**, interfacing with **cloud** platforms,
+**e-commerce** platforms, **site modernization**, **scaffolding greenfield 
 projects**, building **component libraries** and working with **startups**.
 `;
 
