@@ -15,7 +15,7 @@ projects**, building **component libraries** and working with **startups**.
 
 export const IntroSection = () => {
   return (
-    <div className="flex flex-col h-screen justify-center">
+    <div className="flex flex-col justify-center h-screen">
       <div className="flex flex-col gap-2">
         <Heading text={`Hey I'm\nMatthew Ritter`} />
         <SectionText markdown={markdown} />
