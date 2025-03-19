@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ImageToastProvider } from "@/providers/ImageToastProvider";
 import { ImageToast } from "@/components/ImageToast/ImageToast";
+import Header from "@/components/Header/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${inter.variable} antialiased`}>
+      <body className={`mb-20 ${inter.variable} ${inter.variable} antialiased`}>
+        <Header />
         <ImageToastProvider>
           {children}
           <ImageToast />

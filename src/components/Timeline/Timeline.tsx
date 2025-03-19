@@ -7,20 +7,20 @@ export type TimelineData = {
   dates: string[];
 };
 
-const data: TimelineData[] = [
+export const data: TimelineData[] = [
   {
     title: "Full Stack Software Engineer",
-    company: "Azalia Health Inc.",
+    company: "Azalia Health",
     dates: ["2019", "2022"],
   },
   {
     title: "Software Engineer",
-    company: "Formidable Labs LLC",
+    company: "Formidable Labs",
     dates: ["2022", "2024"],
   },
   {
     title: "Senior Software Engineer",
-    company: "NearForm LLC",
+    company: "NearForm",
     dates: ["2024"],
   },
 ];
