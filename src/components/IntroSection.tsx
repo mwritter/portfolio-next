@@ -3,7 +3,7 @@ import SectionText from "./SectionText/SectionText";
 
 const markdown = `
 I have **bachelors degree in Computer Information Systems**, 
-and **over a decade of experience** working with web technologies.
+and **over a decade** of experience working with web technologies.
 \\
 \\
 In my current roll as a Senior Software Engineer I have had the 

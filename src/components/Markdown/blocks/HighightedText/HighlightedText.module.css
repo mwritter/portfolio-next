@@ -1,4 +1,7 @@
 .shine {
+  position: relative;
+  cursor: default;
+    animation: shine 4s ease-in-out infinite alternate;
     background: linear-gradient(
           to right,
           #7953cd 20%,
@@ -11,9 +14,9 @@
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
       background-size: 500% auto;
-      animation: shine 4s ease-in-out infinite alternate;
-  }
 
+  
+  }
 
 @keyframes shine {
     0% {
