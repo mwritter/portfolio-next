@@ -2,11 +2,11 @@ import Heading from "./Heading/Heading";
 import SectionText from "./SectionText/SectionText";
 
 const markdown = `
-I have **bachelors degree in Computer Information Systems**, 
+I have a **bachelors degree in Computer Information Systems** 
 and **over a decade** of experience working with web technologies.
 \\
 \\
-In my current roll as a Senior Software Engineer I have had the 
+In my current role as a Senior Software Engineer, I have the 
 privilege of working on many interesting projects, that involve 
 **building APIs** with **NodeJS**, interfacing with **cloud** platforms, 
 **site modernization**, **e-commerce** platform, **scaffolding greenfield 

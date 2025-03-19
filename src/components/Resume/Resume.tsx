@@ -16,7 +16,7 @@ export const Resume = () => {
         <p>matthewwilliamritter@gmail.com</p>
       </div>
       <p>
-        I’ve been engineering software for over a decade. Specializing in
+        I’ve been engineering software for over a decade, specializing in
         frontend technologies and frameworks like React, Typescript, and NextJS.
         I enjoy working on challenging problems and leveraging software to solve
         those problems.
@@ -80,7 +80,7 @@ Take the lead on specific features, from investigation to implementation.`,
 const formidable: ResumePositionProps = {
   ...f,
   description: `
-Integrate with new teams and technologies quickly to deliver on client projects and improve on team processes where possible.
+Integrate with new teams and technologies quickly to deliver on client projects and improve on team processes when possible.
 \\
 \\
 Mentor others to accelerate their career-growth and encourage their participation.
@@ -104,7 +104,7 @@ Work closely with team members in a fast paced agile environment using continuou
 Improve application stability and performance through features and bug fixes.
 \\
 \\
-Participate in pair programming, mentoring, peer review and on boarding for new engineers.
+Participate in pair programming, mentoring, peer review and onboarding for new engineers.
 \\
 \\
 Implement full stack solutions to achieve client goals related to workflow improvements, patient privacy, client reporting, HIPAA auditing, and encounter charting.`,

@@ -7,7 +7,7 @@ import {
 } from "../SkillCard/SkillCard";
 
 const markdown = `
-Create design systems to insure design constancy and improve developer experience 
+Create design systems to insure design consistence and improve developer experience 
 with technologies like Figma and Storybook.
 `;
 
