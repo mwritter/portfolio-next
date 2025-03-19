@@ -11,7 +11,7 @@ const Header = () => {
     <nav
       className={cn(
         "bg-white/10 py-2 px-3 backdrop-blur-lg w-min rounded-md relative",
-        "fixed sm:top-10 sm:right-10 max-sm:bottom-10 max-sm:left-1/2 -translate-[50%] z-20",
+        "fixed sm:top-10 sm:right-10 max-sm:bottom-5 max-sm:left-1/2 -translate-[50%] z-20",
         "print:hidden",
         styles.header,
         {
