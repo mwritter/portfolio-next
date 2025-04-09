@@ -15,7 +15,7 @@ export const DesignSkillCard = () => {
   return (
     <SkillCard>
       <SkillCardHeader>
-        <SkillCardTitle text="Design" />
+        <SkillCardTitle text={`Design\n `} />
         <SkillCardIconDesign />
       </SkillCardHeader>
       <SkillCardDescription markdown={markdown} />
