@@ -12,7 +12,7 @@ I enjoy working on **challenging problems** and leveraging software to solve tho
 
 export const ProfileSection = () => {
   return (
-    <div className="flex flex-col h-screen justify-center">
+    <div className="flex flex-col justify-center h-screen">
       <div className="flex flex-col gap-2">
         <Heading text={`Senior\nSoftware Engineer`} />
         <SectionText markdown={markdown} />
