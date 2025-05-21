@@ -4,6 +4,7 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import { usePathname } from "next/navigation";
+import { motion } from 'motion/react'
 
 const Header = () => {
   const pathname = usePathname();
@@ -14,17 +15,12 @@ const Header = () => {
         "fixed sm:top-10 sm:right-10 max-sm:bottom-5 max-sm:left-1/2 -translate-[50%] z-20",
         "print:hidden",
         styles.header,
-        {
-          "[&:before]:translate-x-full [&:before]z-0": pathname === "/resume",
-        }
       )}
     >
       <ul className="flex gap-5">
         <li>
           <Link
-            className={cn("z-1",{
-              "text-black": pathname !== "/resume",
-            })}
+            className={cn("z-1 mix-blend-difference")}
             href="/"
           >
             Landing
@@ -32,17 +28,23 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className={cn("z-1",{
-              "text-black": pathname === "/resume",
-            })}
+            className={cn("z-1 mix-blend-difference")}
             href="/resume"
           >
             Resume
           </Link>
         </li>
+        <Indicator active={pathname} />
       </ul>
     </nav>
   );
 };
 
 export default Header;
+
+
+const Indicator = ({active}: {active: string}) => {
+  return <motion.li
+  animate={active === '/resume' ? {left: "50%"} : {left: 0}}
+  className="absolute inset-0 -z-1 w-[50%] rounded-md bg-white"></motion.li>
+}
