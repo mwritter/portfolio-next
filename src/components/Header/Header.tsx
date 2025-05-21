@@ -15,14 +15,14 @@ const Header = () => {
         "print:hidden",
         styles.header,
         {
-          "[&:before]:translate-x-full": pathname === "/resume",
+          "[&:before]:translate-x-full [&:before]z-0": pathname === "/resume",
         }
       )}
     >
       <ul className="flex gap-5">
         <li>
           <Link
-            className={cn({
+            className={cn("z-1",{
               "text-black": pathname !== "/resume",
             })}
             href="/"
@@ -32,7 +32,7 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className={cn({
+            className={cn("z-1",{
               "text-black": pathname === "/resume",
             })}
             href="/resume"
