@@ -46,5 +46,5 @@ export default Header;
 const Indicator = ({active}: {active: string}) => {
   return <motion.li
   animate={active === '/resume' ? {left: "50%"} : {left: 0}}
-  className="absolute inset-0 -z-1 w-[50%] rounded-md bg-white"></motion.li>
+  className="absolute inset-0 -z-1 w-[50%] rounded-md border border-solid border-white bg-black/50"></motion.li>
 }
