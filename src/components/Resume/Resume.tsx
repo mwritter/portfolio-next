@@ -22,6 +22,7 @@ export const Resume = () => {
         those problems.
       </p>
       <div className="flex flex-col gap-5">
+        <ResumePosition {...sanity} />
         <ResumePosition {...nearForm} />
         <ResumePosition {...formidable} />
         <ResumePosition {...azaleaHealth} />
@@ -67,7 +68,23 @@ const ResumePosition = ({
   );
 };
 
-const [a, f, n] = data;
+const [a, f, n, s] = data;
+
+const sanity: ResumePositionProps = {
+  ...s,
+  description: `
+Partner with design and product to ship AI features that make developers’ work with Sanity faster and more pleasant.
+\\
+\\
+Try ideas quickly, then double down on what holds up—solid code, tests, and UX people can rely on.
+\\
+\\
+Build across the stack in TypeScript and React, from internal tools to customer-facing product.
+\\
+\\
+Run A/B tests and experiments to measure how features perform, then prioritize changes based on what we learn.
+`,
+};
 
 const nearForm: ResumePositionProps = {
   ...n,

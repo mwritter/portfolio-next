@@ -21,13 +21,18 @@ export const data: TimelineData[] = [
   {
     title: "Senior Software Engineer",
     company: "NearForm",
-    dates: ["2024"],
+    dates: ["2024", "2025"],
+  },
+  {
+    title: "Senior Software Engineer, AI Growth",
+    company: "Sanity",
+    dates: ["2026"],
   },
 ];
 
 export const Timeline = () => {
   return (
-    <div className="grid md:ml-8 sm:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr_2fr] gap-10 sm:gap-4 w-full max-w-[1440px]">
+    <div className="grid md:ml-8 sm:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_2fr] gap-10 sm:gap-4 w-full max-w-[1440px]">
       {data.map((_data, index) => (
         <TimelineSection
           key={_data.title}
@@ -53,7 +58,7 @@ const TimelineSection = ({
         styles["timeline-section"]
       )}
     >
-      <div className={cn("flex sm:gap-4 items-center ")}>
+      <div className={cn("flex sm:gap-4 items-center")}>
         <TimelineDot active={active} />
         <TimelineBar active={active} />
       </div>
