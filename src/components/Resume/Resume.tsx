@@ -10,7 +10,7 @@ type ResumePositionProps = {
 
 export const Resume = () => {
   return (
-    <div className="max-w-[900px] mx-auto p-5 flex flex-col gap-10 print:text-black!">
+    <div className="max-w-[900px] mx-auto p-5 flex flex-col gap-5 print:text-black!">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl">Matthew Ritter</h1>
         <p>matthewwilliamritter@gmail.com</p>
@@ -27,20 +27,22 @@ export const Resume = () => {
         <ResumePosition {...formidable} />
         <ResumePosition {...azaleaHealth} />
       </div>
-      <div className="space-y-2.5">
-        <h2 className="text-2xl">Education</h2>
-        <p>
-          Valdosta State University, Valdosta, Ga – BS in Computer Information
-          Systems
-        </p>
-      </div>
-      <div className="space-y-2.5">
-        <h2 className="text-2xl">Specialties</h2>
-        <p>
-          Next, React, Redux, Vue, Backbone, Node, Express, JavaScript, HTML,
-          CSS, SCSS, Bootstrap, Tailwind, PHP, Java, Flutter, Python, Rust,
-          Sanity, GraphQL
-        </p>
+      <div className="flex flex-col gap-2 print:break-inside-avoid">
+        <div className="space-y-2.5 print:break-inside-avoid">
+          <h2 className="text-2xl">Education</h2>
+          <p>
+            Valdosta State University, Valdosta, Ga – BS in Computer Information
+            Systems
+          </p>
+        </div>
+        <div className="space-y-2.5 print:break-inside-avoid">
+          <h2 className="text-2xl">Specialties</h2>
+          <p>
+            Next, React, Redux, Vue, Backbone, Node, Express, JavaScript, HTML,
+            CSS, SCSS, Bootstrap, Tailwind, PHP, Java, Flutter, Python, Rust,
+            Sanity, GraphQL
+          </p>
+        </div>
       </div>
     </div>
   );
