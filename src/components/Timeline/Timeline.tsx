@@ -10,7 +10,7 @@ export type TimelineData = {
 export const data: TimelineData[] = [
   {
     title: "Full Stack Software Engineer",
-    company: "Azalia Health",
+    company: "Azalea Health",
     dates: ["2019", "2022"],
   },
   {
