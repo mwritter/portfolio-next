@@ -38,9 +38,8 @@ export const Resume = () => {
         <div className="space-y-2.5 print:break-inside-avoid">
           <h2 className="text-2xl">Specialties</h2>
           <p>
-            Next, React, Redux, Vue, Backbone, Node, Express, JavaScript, HTML,
-            CSS, SCSS, Bootstrap, Tailwind, PHP, Java, Flutter, Python, Rust,
-            Sanity, GraphQL
+            Next.js, React, Node, JavaScript, Typescript, HTML,
+            CSS, SCSS, Tailwind, Go, PHP, GraphQL, Sanity
           </p>
         </div>
       </div>
@@ -76,9 +75,6 @@ const sanity: ResumePositionProps = {
   ...s,
   description: `
 Partner with design and product to ship AI features that make developers’ work with Sanity faster and more pleasant.
-\\
-\\
-Try ideas quickly, then double down on what holds up—solid code, tests, and UX people can rely on.
 \\
 \\
 Build across the stack in TypeScript and React, from internal tools to customer-facing product.
